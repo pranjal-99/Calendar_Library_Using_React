@@ -1,0 +1,25 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.cal {
+  height: 230px;
+  width: 400px;
+  position: absolute;
+  z-index: 1;
+  left: 40px;
+}
+.dropdown-menu {
+  height: 200px;
+  overflow-y: scroll;
+}
+.hide {
+  opacity: 0;
+}
+.show {
+  opacity: 1;
+  cursor: pointer;
+}
+#dropdown-item-button {
+  cursor: context-menu;
+}
