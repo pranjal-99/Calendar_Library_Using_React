@@ -24,11 +24,10 @@ export default function Calendar() {
     "Nov",
     "Dec"
   ];
-  const [currdate, setdate] = useState(1);
   const [year, setyear] = useState(2019);
   const [month, setmonth] = useState("Feb");
-  const [clas, setclass] = useState("col hide");
-  const [new_string,setnew]= useState('');
+  const [clas, setclass] = useState("cal hide");
+  const [new_string, setnew] = useState("");
   let date = new Date(month + " 01," + year.toString());
   let first_day = date.getDay();
   let first = [];
@@ -38,11 +37,9 @@ export default function Calendar() {
   let fifth = [];
   for (let i = 1; i <= 35; i++) {
     if (i <= 7) first.push("");
-    else if (i <= 7) first.push("");
     else if (i <= 14) second.push("");
     else if (i <= 21) third.push("");
     else if (i <= 28) fourth.push("");
-    else if (i <= 31) fifth.push("");
     else fifth.push("");
   }
   let cnt = 1;
@@ -131,15 +128,14 @@ export default function Calendar() {
     setmonth(event.target.value);
   }
   function changeDate(val) {
-    setdate(val);
-    if(clas==="col show") {
-      let format = month+ " " + val + "," + year;
+    if (clas === "cal show") {
+      let format = month + " " + val + "," + year;
       setnew(format);
     }
-    setclass("col hide");
+    setclass("cal hide");
   }
   function calendar() {
-    setclass("col show");
+    setclass("cal show");
   }
   return (
     <div>
